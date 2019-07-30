@@ -36,7 +36,7 @@ For this to work, you need to have a Contentful account.
 
 module.exports = {
 {
-    resolve: `gatsby-theme-gallery-contentful`,
+    resolve: `gatsby-theme-contentful-portfolio`,
     options: {
       basePath: `/portfolio/`,
       baseTitle: `My recent work`,
