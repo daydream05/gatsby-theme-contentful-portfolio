@@ -30,16 +30,9 @@ This theme generates a pinterest-like portfolio gallery for your site. It create
 
 For this to work, you will need to have a Contentful account and the api keys for the space
 
-@TODO: Create an account and grab the api keys
-
 ### Content Model Structure
 
-Once you have created your contentful space, you will need to create a content model that matches this structure.
-
-If you don't want to do this manually, you can run this script. It will
-create a new space with the content model and populate them with content.
-
-If you're planning to add to this to an existing space, I would suggest doing it manually until I learn how to write a script that can do it.
+Once you have created your contentful space, you will need to create a content model that matches this structure. You would also need to have __1 content with all the fields populated.__
 
 #### Content Model
 
