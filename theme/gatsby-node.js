@@ -2,13 +2,13 @@ const slugify = require('slugify')
 
 exports.onCreateNode = (
   { node, actions },
-  { basePath = `/gallery/`}
+  { basePath = `/portfolio/`}
 ) => {
   const { createNodeField } = actions
   
   // We create a url path for each image
-  // using the title, gallery root path and id
-  // e.g. /gallery/this-image-title-938128129/
+  // using the title, portfolio root path and id
+  // e.g. /portfolio/this-image-title-938128129/
   if(node.internal.type === `ContentfulPortfolio`) {
     const slug = `${node.slug}`
     const url = `${basePath}${slug}/`;
@@ -27,7 +27,7 @@ exports.onCreateNode = (
   }
 }
 
-exports.createPages = ({ graphql, actions }, { basePath = `/gallery/` }) => {
+exports.createPages = ({ graphql, actions }, { basePath = `/portfolio/` }) => {
   const { createPage } = actions;
 
   // create a page for each media item
@@ -51,9 +51,7 @@ exports.createPages = ({ graphql, actions }, { basePath = `/gallery/` }) => {
       portfolioList.map(({ node }) => {
         createPage({
           path: node.fields.path,
-          component: require.resolve(
-            `./src/templates/portfolio-template.js`
-          ),
+          component: require.resolve(`./src/templates/portfolio-template.js`),
           context: {
             slug: node.fields.slug
           }
