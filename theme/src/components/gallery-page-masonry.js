@@ -42,7 +42,7 @@ const GalleryPageMasonry = ({ itemList, isBehindAModal, gutter, ...rest }) => {
         className="grid"
         style={{
           width: `100% !important`,
-          div: {
+          "> div": {
             width: `100% !important`
           }
         }}
