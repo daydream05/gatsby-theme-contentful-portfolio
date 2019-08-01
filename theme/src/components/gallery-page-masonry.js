@@ -25,6 +25,7 @@ const GalleryPageMasonry = ({ itemList, isBehindAModal, gutter, ...rest }) => {
     itemSelector: ".grid-item",
     columnWidth: `.grid-sizer`,
     gutter: space[3],
+    fitWidth: true,
   };
 
   return (
@@ -32,11 +33,6 @@ const GalleryPageMasonry = ({ itemList, isBehindAModal, gutter, ...rest }) => {
       css={css({
         mx: [2, 2, 3, 3, 3],
         variant: `masonry.gridContainer`,
-        ".grid": {
-          "> div": {
-            width: `100% !important`,
-          }
-        }
       })}
     >
       <ReactMasonry
@@ -45,9 +41,6 @@ const GalleryPageMasonry = ({ itemList, isBehindAModal, gutter, ...rest }) => {
           gutter
         }}
         className="grid"
-        style={{
-          width: `100% !important`,
-        }}
       >
         <div
           className="grid-sizer"
