@@ -25,10 +25,11 @@ This theme generates a pinterest-like portfolio gallery for your site. It create
 
 ## Pre-requisites
 
-### Create a contentful account
+###  Contentful account
 *If you already have an account and a contentful space, you can skip this part*
 
-For this to work, you will need to have a Contentful account and the api keys for the space
+For this to work, you will need to have a [Contentful](https://www.contentful.com/) account and the necessary api keys that we use for
+[gatsby-source-contentful](https://www.gatsbyjs.org/packages/gatsby-source-contentful/).
 
 ### Content Model Structure
 
@@ -36,9 +37,7 @@ Once you have created your contentful space, you will need to create a content m
 
 #### Content Model
 
-I could have named it "Projects" since it makes more sense but I don't know what I was thinking naming it "Portfolio". I'm just waiting for Gatsby to release the Generic GraphQL Types so we can use any names or fields for this.
-
-Either way, this is a requirement.
+This exact naming is a requirement. (Sorry, I could have named it Projects but I didn't realize it until I'm too deep into the project). 
 
 __Name__: Portfolio
 
