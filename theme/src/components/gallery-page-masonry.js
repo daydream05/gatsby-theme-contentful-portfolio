@@ -35,9 +35,9 @@ const GalleryPageMasonry = ({ itemList, isBehindAModal, gutter, ...rest }) => {
         ".grid": {
           my: 0,
           mx: `auto`,
-          "> * div": {
+          div: {
             width: `100% !important`,
-          }    
+          }   
         }
       })}
     >
