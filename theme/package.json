@@ -1,7 +1,7 @@
 {
   "name": "gatsby-theme-contentful-portfolio",
   "author": "Vince Parulan <ianparulan@gmail.com>",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "license": "MIT",
   "main": "gatsby-config.js",
   "scripts": {
