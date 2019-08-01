@@ -6,6 +6,7 @@ require("dotenv").config({ path: `.env.${activeEnv}` })
 
 module.exports = {
   plugins: [
+    `gatsby-plugin-theme-ui`,
     {
       resolve: `gatsby-theme-blog`,
       options: {},
