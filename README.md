@@ -10,7 +10,6 @@ This theme generates a pinterest-like portfolio gallery for your site. It also c
 - Pinterest-like root page
 - Ability to open each page as modal.
 - Supports and lazy loads videos
-- Dark mode compatible
 - Social media share button
 - A11Y friendly
   - Uses @reach-ui/dialog for modal focusing
@@ -22,6 +21,14 @@ This theme generates a pinterest-like portfolio gallery for your site. It also c
 - Uses Theme-UI
 - (Almost) every component can be styled using theme-ui [variants](https://theme-ui.com/guides/variants#themeable-layout-components)
 - (Almost) every component is extendeable.
+
+**Future features:**
+- Full dark mode support
+- Pagination and infinite scrolling
+- "Related projects" at the bottom of each projects
+
+**Bugs fixing**
+- a lot. need help.
 
 ## Pre-requisites
 
