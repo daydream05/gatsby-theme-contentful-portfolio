@@ -13,7 +13,7 @@
     "gatsby-plugin-emotion": "^4.1.2",
     "gatsby-plugin-react-helmet": "^3.1.2",
     "gatsby-plugin-theme-ui": "^0.2.25",
-    "gatsby-theme-contentful-portfolio": "^*",
+    "gatsby-theme-contentful-portfolio": "^1.0.3",
     "lodash.merge": "^4.6.2",
     "react": "^16.8.6",
     "react-dom": "^16.8.6",
