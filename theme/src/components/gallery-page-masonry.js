@@ -32,7 +32,22 @@ const GalleryPageMasonry = ({ itemList, isBehindAModal, gutter, ...rest }) => {
     <div
       css={css({
         mx: [2, 2, 3, 3, 3],
-        variant: `masonry.gridContainer`
+        variant: `masonry.gridContainer`,
+        ".grid": {
+          my: 0,
+          mx: `auto`,
+          width: `100%`,
+          ".grid-sizer": {
+            width: gridItemWidth,
+            variant: `masonry.gridSizer`
+          },
+          ".grid-item": {
+            marginBottom: [5, 5, 5, 3],
+            mx: [2, 2, 2],
+            width: gridItemWidth,
+            variant: `masonry.gridItem`
+          }
+        }
       })}
     >
       <ReactMasonry
@@ -40,21 +55,7 @@ const GalleryPageMasonry = ({ itemList, isBehindAModal, gutter, ...rest }) => {
           ...masonryOptions,
           gutter
         }}
-        css={css({
-          my: 0,
-          mx: `auto`,
-          width: `100%`,
-          ".grid-sizer": {
-            width: gridItemWidth,
-            variant: `masonry.gridSizer`,
-          },
-          ".grid-item": {
-            marginBottom: [5, 5, 5, 3],
-            mx: [2, 2, 2],
-            width: gridItemWidth,
-            variant: `masonry.gridItem`,
-          }
-        })}
+        className={"grid"}
         {...rest}
       >
         <div className="grid-sizer" />
