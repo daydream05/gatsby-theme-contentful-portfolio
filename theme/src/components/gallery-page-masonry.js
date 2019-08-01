@@ -13,11 +13,11 @@ const gridItemWidth = [
   `calc(99.99% * 1/1 - ${space[2]}px)`,
   `calc(99.99% * 1/1 - ${space[2]}px)`,
   `calc(99.99% * 1/1 - ${space[2]}px)`,
-  `calc(1200px * 1/3 - ${space[3]}px)`,
-  `calc(1200px * 1/3 - ${space[3]}px)`,
-  `calc(1600px * 1/4 - ${space[3]}px)`,
-  `calc(1600px * 1/4 - ${space[3]}px)`,
-  `calc(2800px 1/6 - ${space[3]}px)`
+  `calc(99.99% * 1/3 - ${space[3]}px)`,
+  `calc(99.99% * 1/3 - ${space[3]}px)`,
+  `calc(99.99% * 1/4 - ${space[3]}px)`,
+  `calc(99.99% * 1/4 - ${space[3]}px)`,
+  `calc(99.99% 1/6 - ${space[3]}px)`
 ];
 
 const GalleryPageMasonry = ({ itemList, isBehindAModal, gutter, ...rest }) => {
@@ -25,7 +25,6 @@ const GalleryPageMasonry = ({ itemList, isBehindAModal, gutter, ...rest }) => {
     itemSelector: ".grid-item",
     columnWidth: `.grid-sizer`,
     gutter: space[3],
-    fitWidth: true,
   };
 
   return (
@@ -56,7 +55,6 @@ const GalleryPageMasonry = ({ itemList, isBehindAModal, gutter, ...rest }) => {
           gutter
         }}
         className={"grid"}
-        {...rest}
       >
         <div className="grid-sizer" />
         {itemList &&
