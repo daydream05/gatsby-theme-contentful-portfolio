@@ -23,8 +23,8 @@ const gridItemWidth = [
 const GalleryPageMasonry = ({ itemList, isBehindAModal, gutter, ...rest }) => {
   const masonryOptions = {
     itemSelector: ".grid-item",
-    gutter: space[3],
-    fitWidth: true,
+    columnWidth: `.grid-sizer`,
+    gutter: space[3]
   };
 
   return (
@@ -42,7 +42,6 @@ const GalleryPageMasonry = ({ itemList, isBehindAModal, gutter, ...rest }) => {
         css={css({
           my: 0,
           width: `100%`,
-          mx: `auto`,
           ".grid-sizer": {
             width: gridItemWidth,
             variant: `masonry.gridSizer`
@@ -56,21 +55,22 @@ const GalleryPageMasonry = ({ itemList, isBehindAModal, gutter, ...rest }) => {
         })}
         {...rest}
       >
+        <div className="grid-sizer" />
         {itemList &&
           itemList.map((item, index) => {
             return (
-              <div key={`${item.id}-${index}`} className={`grid-item`}>
-                <PortfolioCard
-                  isBehindAModal={isBehindAModal}
-                  title={item.title}
-                  media={item.media}
-                  category={item.category}
-                  linkTo={item.fields.path}
-                  description={
-                    item.description && item.description.internal.content
-                  }
-                />
-              </div>
+              <PortfolioCard
+                isBehindAModal={isBehindAModal}
+                key={`${item.id}-${index}`}
+                className={`grid-item`}
+                title={item.title}
+                media={item.media}
+                category={item.category}
+                linkTo={item.fields.path}
+                description={
+                  item.description && item.description.internal.content
+                }
+              />
             );
           })}
       </ReactMasonry>
