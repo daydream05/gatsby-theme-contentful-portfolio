@@ -1,8 +1,29 @@
+let activeEnv = process.env.ACTIVE_ENV || process.env.NODE_ENV || "development"
+
+console.log(`Using environment config: '${activeEnv}'`)
+
+require("dotenv").config({ path: `.env.${activeEnv}` })
+
 module.exports = {
   plugins: [
     {
       resolve: `gatsby-theme-blog`,
       options: {},
+    },
+    {
+      resolve: `gatsby-theme-contentful-portfolio`,
+      options: {
+        basePath: `/portfolio/`,
+        baseTitle: `My recent work`,
+        siteMetadata: {
+          siteUrl: `localhost:8000`,
+          siteName: `Gatsby Theme Contentful Portfolio`,
+        },
+        contentfulOptions: {
+          spaceId: process.env.CONTENTFUL_SPACE_ID,
+          accessToken: process.env.CONTENTFUL_ACCESS_TOKEN,
+        },
+      },
     },
   ],
   // Customize your site metadata:

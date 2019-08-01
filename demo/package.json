@@ -10,6 +10,7 @@
   "dependencies": {
     "gatsby": "^2.13.44",
     "gatsby-theme-blog": "^1.0.0",
+    "gatsby-theme-contentful-portfolio": "*",
     "react": "^16.8.6",
     "react-dom": "^16.8.6"
   }
