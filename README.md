@@ -62,38 +62,45 @@ Please note that you will need at least 1 content, with all the fields populated
 
 ### Theme Options
 
-| Key      | Default Value | Description                         |
-|----------|---------------|-------------------------------------|
-| basePath | /portfolio/   | Root url for all portfolio projects |
-|          |               |                                     |
-|          |               |                                     |
-
+| key | default value | Required | description |
+|-----------------------|----------------|----------|------------------------------------------------------------------------------------------------------------------------------------------|
+| basePath | /portfolio/ | Yes | Root url that will house the portfolio landing page and will be prepended to each portfolio project path |
+| baseTitle | My recent work |  | The title for the landing page and the SEO title |
+| baseSubtitle |  |  | This goes under the title on the landing page. |
+| siteMetadata.siteUrl |  | Yes | Your site's url |
+| siteMetadata.siteName |  | Yes | Your site's name |
+| contentfulOptions |  | required | Configuration options from [gatsby-source-contentful](https://www.gatsbyjs.org/packages/gatsby-source-contentful/#configuration-options) |
 
 ```js
 // gatsby-config.js
 
 module.exports = {
-{
-    resolve: `gatsby-theme-contentful-portfolio`,
-    options: {
-      basePath: `/portfolio/`,
-      baseTitle: `My recent work`,
-      baseSubtitle: `You can put whatever here. It's all yours champ`,
-      siteMetadata: {
-        siteUrl: `localhost:8000`,
-        siteName: `The New Site`
-      },
-      contentfulOptions: {
-        spaceId: process.env.CONTENTFUL_SPACE_ID,
-        accessToken: process.env.CONTENTFUL_ACCESS_TOKEN
+  plugins: [
+    {
+      resolve:`gatsby-theme-contentful-portfolio`,
+      options: {
+        basePath: `/portfolio/`,
+        baseTitle: `My recent work`,
+        baseSubtitle: `You can put whatever here. It's all yours champ`,
+        siteMetadata: {
+          siteUrl: `localhost:8000`,
+          siteName: `The New Site`
+        },
+        contentfulOptions: {
+          spaceId: process.env.CONTENTFUL_SPACE_ID,
+          accessToken: process.env.CONTENTFUL_ACCESS_TOKEN
+        }
       }
-    }
-  }
+    },
+  ]
 }
 
 ```
 
+@TODO: _Remove siteMetadata from options since you can query siteMetadata, site wide._
+
+## Theming
+
 ## Extending a component
 
-
-@TODO Extending components with queries
+@TODO Extending components with queries example
