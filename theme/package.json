@@ -1,5 +1,6 @@
 {
   "name": "gatsby-theme-contentful-portfolio",
+  "author": "Vince Parulan <ianparulan@gmail.com>",
   "version": "1.0.0",
   "license": "MIT",
   "main": "gatsby-config.js",
@@ -40,5 +41,10 @@
     "prettier": "^1.18.2",
     "react": "^16.8.6",
     "react-dom": "^16.8.6"
-  }
+  },
+  "keywords": [
+    "gatsby",
+    "gatsby-theme",
+    "gatsby-plugin"
+  ]
 }
