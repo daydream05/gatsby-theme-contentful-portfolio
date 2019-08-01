@@ -36,16 +36,6 @@ const GalleryPageMasonry = ({ itemList, isBehindAModal, gutter, ...rest }) => {
           my: 0,
           mx: `auto`,
           width: `100%`,
-          ".grid-sizer": {
-            width: gridItemWidth,
-            variant: `masonry.gridSizer`
-          },
-          ".grid-item": {
-            marginBottom: [5, 5, 5, 3],
-            mx: [2, 2, 2],
-            width: gridItemWidth,
-            variant: `masonry.gridItem`
-          }
         }
       })}
     >
@@ -56,22 +46,37 @@ const GalleryPageMasonry = ({ itemList, isBehindAModal, gutter, ...rest }) => {
         }}
         className={"grid"}
       >
-        <div className="grid-sizer" />
+        <div
+          className="grid-sizer"
+          css={css({
+            width: gridItemWidth,
+            variant: `masonry.gridSizer`
+          })}
+        />
         {itemList &&
           itemList.map((item, index) => {
             return (
-              <PortfolioCard
-                isBehindAModal={isBehindAModal}
+              <div
                 key={`${item.id}-${index}`}
                 className={`grid-item`}
-                title={item.title}
-                media={item.media}
-                category={item.category}
-                linkTo={item.fields.path}
-                description={
-                  item.description && item.description.internal.content
-                }
-              />
+                css={css({
+                  marginBottom: [5, 5, 5, 3],
+                  mx: [2, 2, 2],
+                  width: gridItemWidth,
+                  variant: `masonry.gridItem`
+                })}
+              >
+                <PortfolioCard
+                  isBehindAModal={isBehindAModal}
+                  title={item.title}
+                  media={item.media}
+                  category={item.category}
+                  linkTo={item.fields.path}
+                  description={
+                    item.description && item.description.internal.content
+                  }
+                />
+              </div>
             );
           })}
       </ReactMasonry>
