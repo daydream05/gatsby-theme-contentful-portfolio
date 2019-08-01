@@ -1,9 +1,8 @@
-import blogTheme from "gatsby-theme-blog/src/gatsby-plugin-theme-ui"
 import portfolioTheme from "gatsby-theme-contentful-portfolio/src/gatsby-plugin-theme-ui"
 
 import merge from "lodash.merge"
 
-const combinedTheme = merge({}, blogTheme, portfolioTheme, {
+const combinedTheme = merge({}, portfolioTheme, {
   buttons: {
     secondary: {
       color: `text`,

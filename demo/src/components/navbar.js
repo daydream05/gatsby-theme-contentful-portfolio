@@ -37,20 +37,6 @@ const Navbar = props => {
             Home
           </Link>
         </li>
-        <li
-          css={css({
-            ...itemStyle,
-          })}
-        >
-          <Link
-            to="/portfolio/"
-            css={css({
-              ...linkStyle,
-            })}
-          >
-            Portfolio
-          </Link>
-        </li>
       </ul>
     </nav>
   )

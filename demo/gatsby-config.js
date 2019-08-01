@@ -8,13 +8,9 @@ module.exports = {
   plugins: [
     `gatsby-plugin-theme-ui`,
     {
-      resolve: `gatsby-theme-blog`,
-      options: {},
-    },
-    {
       resolve: `gatsby-theme-contentful-portfolio`,
       options: {
-        basePath: `/portfolio/`,
+        basePath: `/`,
         baseTitle: `My recent work`,
         siteMetadata: {
           siteUrl: `localhost:8000`,
