@@ -1,9 +1,9 @@
 # Gatsby Theme Gallery Contentful
 
-Show off your portoflio  
+Show off your portoflio with style.
 
 ## What is it?
-This theme generates a pinterest-like portfolio gallery for your site. It creates a page  
+This theme generates a pinterest-like portfolio gallery for your site. It also creates a page for each of your projects.
 
 ## Features
 
