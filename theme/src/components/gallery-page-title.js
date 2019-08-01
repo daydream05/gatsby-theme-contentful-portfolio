@@ -11,7 +11,8 @@ const GalleryPageTitle = props => {
         color: `text`,
         fontSize: [6, 6, 6, 7],
         lineHeight: `1`,
-        variant: `galleryPage.title`
+        variant: `galleryPage.title`,
+        textAlign: [`center`,`center`,`center`,`center`,`left`]
       })}
       {...props}
     >

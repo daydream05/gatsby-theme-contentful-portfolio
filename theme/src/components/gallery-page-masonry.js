@@ -10,21 +10,22 @@ import space from "../gatsby-plugin-theme-ui/space";
 // TODO: This breaks when space is not in the power of 2
 
 const gridItemWidth = [
-  `calc(99.99% * 1/1 - ${space[3]}px)`,
-  `calc(99.99% * 1/1 - ${space[3]}px)`,
-  `calc(99.99% * 1/1 - ${space[3]}px)`,
-  `calc(99.99% * 1/3 - ${space[3]}px)`,
-  `calc(99.99% * 1/3 - ${space[3]}px)`,
-  `calc(99.99% * 1/4 - ${space[3]}px)`,
-  `calc(99.99% * 1/4 - ${space[3]}px)`,
-  `calc(99.99% * 1/6 - ${space[3]}px)`
+  `calc(99.99% * 1/1 - ${space[2]}px)`,
+  `calc(99.99% * 1/1 - ${space[2]}px)`,
+  `calc(99.99% * 1/1 - ${space[2]}px)`,
+  `calc(1200px * 1/3 - ${space[3]}px)`,
+  `calc(1200px * 1/3 - ${space[3]}px)`,
+  `calc(1600px * 1/4 - ${space[3]}px)`,
+  `calc(1600px * 1/4 - ${space[3]}px)`,
+  `calc(2800px 1/6 - ${space[3]}px)`
 ];
 
 const GalleryPageMasonry = ({ itemList, isBehindAModal, gutter, ...rest }) => {
   const masonryOptions = {
     itemSelector: ".grid-item",
     columnWidth: `.grid-sizer`,
-    gutter: space[3]
+    gutter: space[3],
+    fitWidth: true,
   };
 
   return (
@@ -41,16 +42,17 @@ const GalleryPageMasonry = ({ itemList, isBehindAModal, gutter, ...rest }) => {
         }}
         css={css({
           my: 0,
+          mx: `auto`,
           width: `100%`,
           ".grid-sizer": {
             width: gridItemWidth,
-            variant: `masonry.gridSizer`
+            variant: `masonry.gridSizer`,
           },
           ".grid-item": {
             marginBottom: [5, 5, 5, 3],
             mx: [2, 2, 2],
             width: gridItemWidth,
-            variant: `masonry.gridItem`
+            variant: `masonry.gridItem`,
           }
         })}
         {...rest}
