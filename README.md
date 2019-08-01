@@ -4,10 +4,6 @@ Show off your portoflio with style.
 
 **Live Demo**: https://gatsby-theme-contentful-portfolio.netlify.com/
 
-**WARNING**
-React-masonry-component is not ssr friendly :(
-Gonna have to start over and find a better pinterest style grid.
-
 ## What is it?
 This theme generates a pinterest-like portfolio gallery for your site. It also creates a page for each of your projects.
 
@@ -35,6 +31,9 @@ This theme generates a pinterest-like portfolio gallery for your site. It also c
 
 **Bugs fixing**
 - a lot. need help.
+- React-masonry-component is not ssr friendly :(
+Gonna have to start over and find a better pinterest style grid for the default landing page. Anyway, you can override the gallery page by extending
+`src/components/gallery-page-content`. You'll have access to the graphql data and choose whatever design you want for it.
 
 
 ## Pre-requisites
