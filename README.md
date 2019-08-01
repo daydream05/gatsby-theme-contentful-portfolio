@@ -2,6 +2,8 @@
 
 Show off your portoflio with style.
 
+**Live Demo**: https://gatsby-theme-contentful-portfolio.netlify.com/
+
 ## What is it?
 This theme generates a pinterest-like portfolio gallery for your site. It also creates a page for each of your projects.
 
@@ -29,6 +31,7 @@ This theme generates a pinterest-like portfolio gallery for your site. It also c
 
 **Bugs fixing**
 - a lot. need help.
+
 
 ## Pre-requisites
 
@@ -65,8 +68,6 @@ You can add more fields to your content model but the above fields are required.
 
 Please note that you will need at least 1 content, with all the fields populated for it to work.
 
-## Setup
-
 ### Theme Options
 
 | key | default value | Required | description |
@@ -78,6 +79,8 @@ Please note that you will need at least 1 content, with all the fields populated
 | siteMetadata.siteName |  | Yes | Your site's name |
 | contentfulOptions |  | required | Configuration options from [gatsby-source-contentful](https://www.gatsbyjs.org/packages/gatsby-source-contentful/#configuration-options) |
 
+## Installation
+`npm install gatsby-theme-contentful-portfolio`
 ```js
 // gatsby-config.js
 
