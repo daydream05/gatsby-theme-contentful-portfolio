@@ -32,12 +32,10 @@ const GalleryPageMasonry = ({ itemList, isBehindAModal, gutter, ...rest }) => {
       css={css({
         mx: [2, 2, 3, 3, 3],
         variant: `masonry.gridContainer`,
-        ".grid": {
+        ".grid div": {
           my: 0,
           mx: `auto`,
-          div: {
-            width: `100% !important`,
-          }   
+          width: `100% !important`,
         }
       })}
     >
