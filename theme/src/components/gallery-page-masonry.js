@@ -31,7 +31,7 @@ const GalleryPageMasonry = ({ itemList, isBehindAModal, gutter, ...rest }) => {
     <div
       css={css({
         mx: [2, 2, 3, 3, 3],
-        variant: `masonry.gridContainer`,
+        variant: `masonry.gridContainer`
       })}
     >
       <ReactMasonry
@@ -42,6 +42,9 @@ const GalleryPageMasonry = ({ itemList, isBehindAModal, gutter, ...rest }) => {
         className="grid"
         style={{
           width: `100% !important`,
+          div: {
+            width: `100% !important`
+          }
         }}
       >
         <div
