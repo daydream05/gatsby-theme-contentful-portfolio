@@ -32,7 +32,7 @@ const GalleryPageMasonry = ({ itemList, isBehindAModal, gutter, ...rest }) => {
       css={css({
         mx: [2, 2, 3, 3, 3],
         variant: `masonry.gridContainer`,
-        ".grid div": {
+        ".grid": {
           my: 0,
           mx: `auto`,
           width: `100% !important`,
@@ -45,6 +45,9 @@ const GalleryPageMasonry = ({ itemList, isBehindAModal, gutter, ...rest }) => {
           gutter
         }}
         className={"grid"}
+        style={{
+          width: `100% !important`,
+        }}
       >
         <div
           className="grid-sizer"
