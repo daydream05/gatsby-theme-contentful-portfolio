@@ -11,7 +11,6 @@ import colors from "./colors";
 import galleryPage from "./gallery-page";
 import space from "./space";
 
-console.log(portfolioCard);
 const baseTheme = merge(funk, {
   space,
   mediaQueries,
@@ -23,7 +22,5 @@ const baseTheme = merge(funk, {
   colors,
   galleryPage
 });
-
-console.log(baseTheme);
 
 export default baseTheme;
