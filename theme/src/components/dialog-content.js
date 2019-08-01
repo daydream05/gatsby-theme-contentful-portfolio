@@ -1,12 +1,12 @@
 import React from "react";
-import { DialogContent } from "@reach/dialog";
+import { DialogContent as Content } from "@reach/dialog";
 import { css } from "theme-ui";
 
 import theme from "../gatsby-plugin-theme-ui";
 
-const CustomDialogContent = props => {
+const DialogContent = props => {
   return (
-    <DialogContent
+    <Content
       css={css({
         p: 0,
         background: `unset`,
@@ -18,8 +18,8 @@ const CustomDialogContent = props => {
       {...props}
     >
       {props.children}
-    </DialogContent>
+    </Content>
   );
 };
 
-export default CustomDialogContent;
+export default DialogContent;

@@ -1,13 +1,13 @@
 import React from "react";
-import { DialogOverlay } from "@reach/dialog";
+import { DialogOverlay as Overlay } from "@reach/dialog";
 import { css } from "theme-ui";
 
-const CustomDialogOverlay = props => {
+const DialogOverlay = props => {
   return (
-    <DialogOverlay
+    <Overlay
       css={css({
         zIndex: `modal`,
-        bg: `white`,
+        bg: `muted`,
         py: 4,
         px: [3, 3, 3, 4, 6, 0],
         variant: `dialog.overlay`
@@ -15,8 +15,8 @@ const CustomDialogOverlay = props => {
       {...props}
     >
       {props.children}
-    </DialogOverlay>
+    </Overlay>
   );
 };
 
-export default CustomDialogOverlay;
+export default DialogOverlay;
